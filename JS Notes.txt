@@ -1,0 +1,189 @@
+JS notes:
+
+
+1. Redeclaration is alowed in js using var .
+2. Reinitialization and redclaration both are allowed in js.
+
+
+LET CAN BE REINITIALIZED BUT CANNOT BE REDECLARED.
+
+const cannot be reinitialized or redeclared 
+
+without value i cannot declare any const.
+
+break can be used in if, if it is inside loop or switch statement else not.
+
+
+Array methods :
+
+push - add element at the end of the array
+pop - remove last element from the array 
+shift - removes from the start of the array
+unshift - adds from the start of the array
+
+splice -> splice(1,1,"bear"), splice(1,2,"bear")
+from, to in splice function 
+from - starting of the index from which element needs to be removed 
+to - how manay elements needs to be removed 
+
+original array = [1,2,3,4,5]
+slice ->returns a new array (subset)
+pop.slice(1,4)-> (](excludes the last index)--> [2,3,4]
+
+indexof("string")
+indexof("string", index from where to start the counting )
+
+forEach 
+let n = [1,2,3,4,5,6,,7]
+n.forEach((e)=>{
+	console.log(e);
+})
+
+
+MAP :
+always returns another array 
+
+
+Filter:
+returns an array with filtered values as per the condition provided
+
+
+
+
+we cannot perform method overload in js
+
+constructor overloading is not allowed in JS. In runtime it will give you error.
+
+multiple inheritance is not allowed in js as in java 
+
+
+static varibale or function call it by using calss name 
+non static varibale or function call it by using object reference name 
+
+if child class has it's own variable same as class then value of child class will be picked if object reference variable 
+is used to access that variable.
+
+
+blocking api --> sync api's and non blocking --> async api's
+
+
+promises has 3 states: pending , fulfilled or rejected.
+
+
+if fulfilled it gives fulfulled statement 
+if rejected it gives the reason or error message.
+
+promises can be chained 
+
+PromiseAllSettled 
+Usefull when you want to process all promises, whether they succeed or fail,
+and you want to gather information about the outcome of each promise.
+
+Promise.race -> it will resolve/reject the promise which takes least time to process.
+
+Promise.any --> It is used for handling multiple promises and resolving with the value of the first fulfilled/resolved promise.
+If no resolved/fulfilled promise is encountered then it will list all rejected promises.
+
+why callback hell is bad or pyramid of doom:
+1. horrible readabiliy.
+2. handling error
+3. bad indentation/alignment of code.
+4. debugging is hard.
+
+instead we should use promises or async-await process. 
+
+In normal function we cannot write await 
+but in async function , it is not mandatory to write await function
+
+
+console.log
+console.warn
+console.info
+console.error
+
+console.table
+
+console.group
+console.groupEnd()
+
+console.time
+
+console.clear
+
+console.assert
+
+console.trace
+
+console.log("%c I Love javascript coding","color:red;backgorund: green; border: red");
+
+
+spread operator (...)
+
+charCodeAt --> returns ascii 
+
+string methods :
+
+in substring -ve is converted into 0
+in slice -ve is considered as from last 
++ve left to right 
+-ve right to left 
+
+
+split returns an array 
+
+Boolean methods
+.includes returns boolean 
+.startsWith
+.endsWith
+
+.replace 
+only replaces the first occurance of that string 
+.replaceAll 
+replaces all the occurances
+
+.trim()
+removes the spaces of start and end not middle 
+.trimStart()
+removes the spaces of start 
+
+
+.padEnd(19,"*");
+.padStart
+
+.repeat()
+
+.indexOf if false will give -1
+.lastIndexOf ( position of last string)
+
+.search("")
+
+
+
+----------------------------
+
+TAU
+
+callback functions are functions that are used as input to another function.
+
+Functions which doesn't have the return statement then undefined is returned.
+
+But in arrow functions if it has only 1 line of code it considers it as a return statement.
+
+let and const are used with blocked scopr variable 
+
+var is globally scoped 
+
+const must be initialized when declare unlike var and let.
+
+forEach can be used for arrays but not for strings
+
+higher order functions are functions which takes any funciton as a parameter or return function .
+
+forEach doesn't create new array but map doesn
+
+foreach for arrays 
+
+arr.splice(3);//only one index means deleted from that index till the end
+arr.splice(start_index, count,elements_to_replace)
+arr.splice(delete_from_this_index);
+
